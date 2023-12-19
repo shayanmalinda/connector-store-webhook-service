@@ -4,7 +4,7 @@ import ballerinax/trigger.github;
 configurable string webHookSecret = ?;
 
 configurable github:ListenerConfig userInput = {
-    "secret": webHookSecret
+    webhookSecret: "helloworld"
 };
 listener github:Listener webhookListener = new (userInput, 8090);
 
